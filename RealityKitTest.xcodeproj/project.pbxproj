@@ -15,6 +15,7 @@
 		E1C01B0D28A15549004C5582 /* RealityKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C01B0C28A15549004C5582 /* RealityKitTestTests.swift */; };
 		E1C01B1728A15549004C5582 /* RealityKitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C01B1628A15549004C5582 /* RealityKitTestUITests.swift */; };
 		E1C01B1928A15549004C5582 /* RealityKitTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C01B1828A15549004C5582 /* RealityKitTestUITestsLaunchTests.swift */; };
+		E1C01B2928A15DC5004C5582 /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E1C01B2828A15DC5004C5582 /* cup_saucer_set.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E1C01B1228A15549004C5582 /* RealityKitTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealityKitTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C01B1628A15549004C5582 /* RealityKitTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestUITests.swift; sourceTree = "<group>"; };
 		E1C01B1828A15549004C5582 /* RealityKitTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1C01B2828A15DC5004C5582 /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cup_saucer_set.usdz; path = ../../../../../../Downloads/cup_saucer_set.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		E1C01AF828A15546004C5582 /* RealityKitTest */ = {
 			isa = PBXGroup;
 			children = (
+				E1C01B2528A15D3F004C5582 /* Models */,
 				E1C01AF928A15546004C5582 /* AppDelegate.swift */,
 				E1C01AFB28A15546004C5582 /* ContentView.swift */,
 				E1C01AFD28A15546004C5582 /* Experience.rcproject */,
@@ -128,6 +131,14 @@
 				E1C01B1828A15549004C5582 /* RealityKitTestUITestsLaunchTests.swift */,
 			);
 			path = RealityKitTestUITests;
+			sourceTree = "<group>";
+		};
+		E1C01B2528A15D3F004C5582 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1C01B2828A15DC5004C5582 /* cup_saucer_set.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			files = (
 				E1C01B0328A15549004C5582 /* Preview Assets.xcassets in Resources */,
 				E1C01B0028A15549004C5582 /* Assets.xcassets in Resources */,
+				E1C01B2928A15DC5004C5582 /* cup_saucer_set.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
