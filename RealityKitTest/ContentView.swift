@@ -9,8 +9,32 @@ import SwiftUI
 import RealityKit
 
 struct ContentView : View {
+    private var models: [String] = {
+       // Dynamically get our model filenames
+        let filemanager = FileManager.default
+        
+        guard let path = Bundle.main.resourcePath, let files = try? filemanager.contentsOfDirectory(atPath: path) else {
+            return []
+        }
+        
+        var availableModels: [String] = []
+        for filename in files where filename.hasSuffix("usdz") {
+            let modelName = filename.replacingOccurrences(of: ".usdz", with: "")
+            availableModels.append(modelName)
+        }
+        
+        return availableModels
+    }()
+    
     var body: some View {
-        Text("Hello!")
+        ZStack(alignment: .bottom) {
+            ARViewContainer()
+//            ModelPickerView(models: models)
+            HStack {
+                // Cancel Button
+                
+            }
+        }
     }
 }
 
@@ -31,7 +55,32 @@ struct ARViewContainer: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
+}
+
+struct ModelPickerView: View {
+    var models: [String]
     
+    var body: some View {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(0 ..< self.models.count) {
+                        index in
+                        Button("", action: {
+                            print("DEBUG: selected model with n ame: \(self.models[index])")
+                        })
+                        
+                        Image(uiImage: UIImage(named: self.models[index])!)
+                            .resizable()
+                            .frame(height: 80)
+                            .aspectRatio(1/1, contentMode: .fit)
+                            .background(Color.white)
+                            .cornerRadius(12)
+                    }
+                }
+        }
+        .padding(20)
+        .background(Color.black.opacity(0.5))
+    }
 }
 
 #if DEBUG
